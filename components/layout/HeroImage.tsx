@@ -11,7 +11,7 @@ const HeroImage = ({ data }) => {
       <div className="relative h-72">
         <Image
           alt="image hero"
-          src={`${IMGPATH}${data.results[idRandom]?.backdrop_path}`}
+          src={`${IMGPATH}${data[idRandom]?.backdrop_path}`}
           fill
           sizes="100vw"
           style={{

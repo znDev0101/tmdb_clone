@@ -1,6 +1,7 @@
 "use client"
 
 import React, { MouseEventHandler, useState } from "react"
+import Link from "next/link"
 import nav_logo from "../../public/navbar_icon.svg"
 import nav_logo_mobile from "../../public/navbar_icon_mobile.svg"
 import { IoSearch } from "react-icons/io5"
@@ -30,19 +31,20 @@ const Navbar = () => {
           />
           <HiMenu className="text-3xl text-white" />
         </div>
-
-        <div className="hidden lg:flex flex-col w-36">
-          <Image
-            src={nav_logo}
-            alt="nav logo"
-            sizes="100vw"
-            style={{
-              width: "100%",
-              height: "auto",
-              objectFit: "cover",
-            }}
-          />
-        </div>
+        <Link href="/">
+          <div className="hidden lg:flex flex-col w-36">
+            <Image
+              src={nav_logo}
+              alt="nav logo"
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+        </Link>
         <ul className="hidden lg:flex gap-x-5 text-white">
           <li className="font-semibold">Movies</li>
           <li className="font-semibold">Tv Show</li>
